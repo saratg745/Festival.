@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Contentosos - Festival de Música Popular</title>
+    <link rel="stylesheet" href="stylo.css">
+</head>
+<body>
+    <header>
+        <h1>FESTIVAL CONTENTOSOS</h1>
+        <h2>FESTIVAL DE MÚSICA POPULAR</h2>
+        <nav>
+            <ul>
+                <li><a href="Festival.html">Inicio</a></li>
+                <li><a href="Artistas.html">Artistas</a></li>
+                <li><a href="Alojamientos.html">Alojamientos</a></li>
+                <li><a href="Actividades.html">Actividades</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Boleteria.html">Boletería</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <img src="IMG/luis alfonso.jpg" alt="Festival" id="imagen-principal">
+        <div class="info">
+            <p class="fecha">06 al 08 de Diciembre 2024</p>
+            <p class="Lugar">Medellín, Colombia
+            Estadio Atanasio Girardot</p>
+            <p class="entradas"><a href="Boleteria.html" class="boton">Comprar entradas</a></p>
+        </div>
+    </section>
+
+    <section id="descripcion">
+        <p>Por primera vez en Colombia se realizará un festival de música popular, se llevará a cabo en la ciudad de Medellín del 06 al 08 de diciembre en el Estadio Atanasio Girardot.</p>
+    </section>
+
+    <section id="cuenta-regresiva">
+        <h3>Cuenta regresiva</h3>
+        <div class="contador">
+            <p>00:00:0</p>
+        </div>
+    </section>
+
+    <script>
+        // Cuenta regresiva
+        const countdownDate = new Date("Dec 6, 2024 00:00:00").getTime();
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+    
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("timer").innerHTML = "FESTIVAL INICIADO";
+            } else {
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                document.getElementById("timer").innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+            }
+        }, 1000);
+    </script>
+
+    <footer>
+        <div class="patrocinadores">
+            <img src="IMG/patrocinadores.png" alt="patrocinadores">
+        </div>
+        <p>2024 Festival Contentosos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

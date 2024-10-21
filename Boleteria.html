@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Contentosos - Festival de Música Popular</title>
+    <link rel="stylesheet" href="stylo.css">
+</head>
+<body>
+    <header>
+        <h1>Boleteria</h1>
+        <nav>
+            <ul>
+                <li><a href="Festival.html">Inicio</a></li>
+                <li><a href="Artistas.html">Artistas</a></li>
+                <li><a href="Alojamientos.html">Alojamientos</a></li>
+                <li><a href="Actividades.html">Actividades</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Boleteria.html">Boletería</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="compra">
+        <section>
+            <h2 class="compraboleteria">Compra de boleteria</h2>
+            <form action="/comprar_boletos" method="POST">
+                <div class="ticket-form">
+                    <div>
+                        <label for="ticket-type" class="tickets">Tipo de Boleta</label>
+                        <select id="ticket-type" name="ticket_type" required class="general">
+                            <option value="general">General - $50</option>
+                            <option value="vip">VIP - $100</option>
+                            <option value="platino">Platino - $150</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="quantity" class="tickets">Cantidad</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required class="cantidad">
+                    </div>
+                </div>
+                <div class="compraahora">
+                <button type="submit" class="compraahora">Comprar Ahora</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    
